@@ -1,0 +1,124 @@
+.skills {
+    align-items: center;
+    color: #767676;
+    display: flex;
+    font-size: 1.7rem;
+}
+.skills ul {
+    justify-content: center;
+}
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    list-style: none;
+}
+
+* {
+    scrollbar-color: #8e8e8e #fff;
+    scrollbar-width: thin;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    background-color: #767676;
+}
+.myprofilepicture{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 40%;
+    animation: morph-border 3s infinite alternate;
+    border-color: black;
+}
+#align-to-the-right{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+.d-block {
+    width: 100%;
+    height: auto;
+    transition: transform 1.1s ease;
+}
+
+.myprofilepicture:hover .d-block{
+    transform: scale(1.25);
+}
+
+@keyframes morph-border {
+    0% {
+        border-width: 0;
+    }
+    25% {
+        border-width: 5px;
+        transform: translate(-5px, -5px); /* Move border randomly */
+    }
+    50% {
+        border-width: 0;
+    }
+    75% {
+        border-width: 3px;
+        transform: translate(5px, 5px); /* Move border randomly */
+    }
+    100% {
+        border-width: 0;
+    }
+}
+
+/* >> I still need to fix responsiveness onto mobile - the picture gets cut on the bottom << */
+
+.footer-btn{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.footer-text{
+    font-size: small;
+    font-weight: 350;
+}
+
+    /* -->  Media Queries for different Screens :: Write code here */
+
+@media (max-width: 770px){
+    .myprofilepicture{
+        width: 235px;
+        height: 235px;
+    }
+    #align-to-the-right{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+}
+@media (max-width: 390px){
+    .myprofilepicture{
+        width: 195px;
+        height: 195px;
+    }
+    #align-to-the-right{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+}
+
+/* --> Hugo.dev Moprh-text Mini-project :: Solve here */
+
+.morph-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation: reveal-text 0.5s steps(20, end);
+}
+
+@keyframes reveal-text {
+    from { width: 0; }
+    to { width: 100%; }
+}
